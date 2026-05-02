@@ -1,0 +1,22 @@
+﻿Analyzing mobile_app...                                         
+
+   info - Parameter 'key' could be a super parameter - lib\navigation\bottom_nav.dart:8:9 - use_super_parameters
+   info - Invalid use of a private type in a public API - lib\navigation\bottom_nav.dart:11:3 - library_private_types_in_public_api
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\navigation\bottom_nav.dart:46:42 - deprecated_member_use
+   info - Parameter 'key' could be a super parameter - lib\screens\analysis_screen.dart:9:9 - use_super_parameters
+   info - Parameter 'key' could be a super parameter - lib\screens\dashboard_screen.dart:11:9 - use_super_parameters
+   info - Invalid use of a private type in a public API - lib\screens\dashboard_screen.dart:14:3 - library_private_types_in_public_api
+   info - Parameter 'key' could be a super parameter - lib\screens\job_matches_screen.dart:7:9 - use_super_parameters
+   info - Parameter 'key' could be a super parameter - lib\screens\login_screen.dart:7:9 - use_super_parameters
+   info - Invalid use of a private type in a public API - lib\screens\login_screen.dart:10:3 - library_private_types_in_public_api
+   info - Parameter 'key' could be a super parameter - lib\widgets\buttons.dart:9:9 - use_super_parameters
+   info - Parameter 'key' could be a super parameter - lib\widgets\glass_card.dart:9:9 - use_super_parameters
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\widgets\glass_card.dart:25:33 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\widgets\glass_card.dart:28:35 - deprecated_member_use
+   info - Parameter 'key' could be a super parameter - lib\widgets\score_gauge.dart:7:9 - use_super_parameters
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\widgets\score_gauge.dart:20:43 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\widgets\score_gauge.dart:38:37 - deprecated_member_use
+   info - Parameter 'key' could be a super parameter - lib\widgets\skill_chip.dart:8:9 - use_super_parameters
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\widgets\skill_chip.dart:19:52 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\widgets\skill_chip.dart:19:90 - deprecated_member_use
+

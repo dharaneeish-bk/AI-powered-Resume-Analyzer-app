@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Job Matches - AI Resume Pro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Manrope:wght@600;700;800;900&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-container": "#abe1ff",
+                    "surface-container-lowest": "#080f10",
+                    "tertiary": "#edf7ff",
+                    "on-error-container": "#ffdad6",
+                    "surface-container-low": "#151d1e",
+                    "surface": "#0d1515",
+                    "on-surface-variant": "#b9cacb",
+                    "inverse-primary": "#006970",
+                    "tertiary-fixed": "#c1e8ff",
+                    "secondary-container": "#7d01b1",
+                    "on-surface": "#dce4e5",
+                    "primary-fixed": "#7df4ff",
+                    "background": "#0d1515",
+                    "surface-bright": "#333b3b",
+                    "on-tertiary": "#003548",
+                    "surface-container-highest": "#2e3637",
+                    "outline": "#849495",
+                    "surface-tint": "#00dbe9",
+                    "secondary": "#e9b3ff",
+                    "on-error": "#690005",
+                    "surface-variant": "#2e3637",
+                    "inverse-on-surface": "#2a3233",
+                    "on-primary-container": "#006970",
+                    "secondary-fixed-dim": "#e9b3ff",
+                    "error": "#ffb4ab",
+                    "inverse-surface": "#dce4e5",
+                    "on-primary": "#00363a",
+                    "surface-dim": "#0d1515",
+                    "surface-container-high": "#232b2c",
+                    "secondary-fixed": "#f6d9ff",
+                    "on-tertiary-fixed-variant": "#004d67",
+                    "outline-variant": "#3b494b",
+                    "on-secondary-fixed": "#310048",
+                    "primary": "#dbfcff",
+                    "tertiary-fixed-dim": "#74d1ff",
+                    "on-secondary-fixed-variant": "#7200a3",
+                    "primary-container": "#00f0ff",
+                    "on-tertiary-fixed": "#001e2b",
+                    "on-primary-fixed": "#002022",
+                    "on-primary-fixed-variant": "#004f54",
+                    "on-tertiary-container": "#006688",
+                    "surface-container": "#192122",
+                    "on-secondary-container": "#e5a9ff",
+                    "primary-fixed-dim": "#00dbe9",
+                    "on-background": "#dce4e5",
+                    "on-secondary": "#510074",
+                    "error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "xs": "4px",
+                    "sm": "12px",
+                    "md": "24px",
+                    "lg": "48px",
+                    "margin": "32px",
+                    "xl": "80px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "h3": ["Manrope"],
+                    "h1": ["Manrope"],
+                    "h2": ["Manrope"],
+                    "label-sm": ["Inter"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                    "h3": ["24px", {"lineHeight": "1.4", "letterSpacing": "0", "fontWeight": "600"}],
+                    "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "h2": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        .glass-edge {
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            border-left: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .atmosphere-glow {
+            background: radial-gradient(circle at 50% -20%, rgba(0, 240, 255, 0.15), transparent 70%),
+                        radial-gradient(circle at 0% 100%, rgba(125, 1, 177, 0.1), transparent 50%);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md min-h-screen atmosphere-glow overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 z-50 w-full bg-white/5 dark:bg-slate-900/40 backdrop-blur-xl border-b border-white/10 flex justify-between items-center px-6 py-4 shadow-[0_8px_32px_0_rgba(0,240,255,0.1)]">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-cyan-400 cursor-pointer hover:opacity-80 transition-opacity" data-icon="menu">menu</span>
+<h1 class="text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 font-manrope tracking-tight">AI Resume Pro</h1>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full border border-cyan-400/30 p-0.5 overflow-hidden">
+<img alt="User Profile" class="w-full h-full object-cover rounded-full" data-alt="A professional headshot of a senior product designer with a confident expression, set against a dark, minimalist studio background. The lighting is soft and cinematic, highlighting facial features with a cool cyan rim light that matches the tech-focused UI aesthetic. The overall mood is high-integrity, visionary, and elite, suitable for a premium career advancement platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_qJvXM6e-bbq7ycLYGtJa-M__Qkpa4QqIIzUJsGtQjjnyXWK7Ekj7eDQ17WejDhYDr29Yxxd7IbYNzJkLIBMORK4iQVgkZAb7OhaOGD8gXuVhWAadwh1DVJ-nG9ZkDUzw3BafmsB4JjV4AnYv7Wv6Z8A9MXchPe0nYMqnToyK7wwlDZdmSIpBhZw42Kmn4M30vfspylo0CLiIZ6Z_T0iRNMM-TjLZyS9QcSiyt7bEEBFV2RwDaqrXMGqwHOgvMv_bazt4UNLk9hiN"/>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-4 md:px-margin max-w-7xl mx-auto">
+<!-- Header Section -->
+<section class="mb-md">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-sm">
+<div>
+<h2 class="font-h2 text-h2 text-primary mb-xs">Recommended Jobs</h2>
+<p class="text-on-surface-variant font-body-md">AI-matched positions based on your latest resume score of 92.</p>
+</div>
+<div class="flex items-center gap-sm">
+<button class="flex items-center gap-xs px-4 py-2 rounded-xl glass-card text-label-sm font-label-sm hover:bg-white/10 transition-all">
+<span class="material-symbols-outlined text-[18px]" data-icon="filter_list">filter_list</span>
+                        Filters
+                    </button>
+<button class="flex items-center gap-xs px-4 py-2 rounded-xl glass-card text-label-sm font-label-sm hover:bg-white/10 transition-all">
+<span class="material-symbols-outlined text-[18px]" data-icon="sort">sort</span>
+                        Sort by Match
+                    </button>
+</div>
+</div>
+</section>
+<!-- Jobs Grid/List -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Job Card 1 -->
+<div class="lg:col-span-8 group">
+<div class="glass-card glass-edge rounded-3xl p-md flex flex-col md:flex-row gap-md hover:border-cyan-400/50 transition-all duration-300 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4">
+<div class="flex flex-col items-end">
+<span class="text-xs font-bold uppercase tracking-widest text-cyan-400 mb-1">AI Match Score</span>
+<div class="text-3xl font-black text-cyan-400">98%</div>
+</div>
+</div>
+<div class="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-white/5 flex items-center justify-center border border-white/10 shrink-0">
+<span class="material-symbols-outlined text-4xl text-purple-400" data-icon="polymer">polymer</span>
+</div>
+<div class="flex-1 pt-2 md:pt-0">
+<div class="mb-md">
+<h3 class="font-h3 text-h3 text-white group-hover:text-cyan-300 transition-colors">Senior UX Designer</h3>
+<div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-on-surface-variant font-body-md">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="domain">domain</span>
+                                    Lumina Tech
+                                </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+                                    Remote
+                                </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="payments">payments</span>
+                                    $160k - $210k
+                                </span>
+</div>
+</div>
+<div class="flex flex-wrap gap-xs mb-md">
+<span class="px-3 py-1 rounded-full bg-secondary-container/20 border border-secondary-container/30 text-secondary text-label-sm">Figma Expert</span>
+<span class="px-3 py-1 rounded-full bg-secondary-container/20 border border-secondary-container/30 text-secondary text-label-sm">Design Systems</span>
+<span class="px-3 py-1 rounded-full bg-secondary-container/20 border border-secondary-container/30 text-secondary text-label-sm">Leadership</span>
+</div>
+<div class="flex gap-sm">
+<button class="bg-gradient-to-r from-cyan-400 to-cyan-500 text-black font-bold px-6 py-2.5 rounded-xl hover:shadow-[0_0_20px_rgba(0,240,255,0.4)] transition-all active:scale-95">Apply Now</button>
+<button class="glass-card px-4 py-2.5 rounded-xl border border-white/10 text-white hover:bg-white/10 transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Stats Sidebar (Bento Style) -->
+<div class="lg:col-span-4 space-y-gutter">
+<div class="glass-card glass-edge rounded-3xl p-md border-l-4 border-cyan-400">
+<div class="flex justify-between items-start mb-sm">
+<h4 class="font-manrope font-bold text-white uppercase text-xs tracking-widest">Market Insights</h4>
+<span class="material-symbols-outlined text-cyan-400" data-icon="trending_up">trending_up</span>
+</div>
+<p class="text-h3 font-h3 text-primary mb-xs">High Demand</p>
+<p class="text-body-md text-on-surface-variant leading-tight">Roles matching your skill set have increased by <span class="text-cyan-400">14%</span> this month in your area.</p>
+</div>
+<div class="glass-card glass-edge rounded-3xl p-md bg-gradient-to-br from-purple-900/20 to-transparent">
+<h4 class="font-manrope font-bold text-white uppercase text-xs tracking-widest mb-sm">Career Path Progress</h4>
+<div class="flex items-center gap-md">
+<div class="relative w-16 h-16 shrink-0">
+<svg class="w-full h-full" viewbox="0 0 36 36">
+<path class="text-white/10" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="transparent" stroke="currentColor" stroke-width="3"></path>
+<path class="text-cyan-400" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="transparent" stroke="currentColor" stroke-dasharray="92, 100" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center text-xs font-bold text-cyan-300">92</div>
+</div>
+<div>
+<p class="text-white font-bold">Elite Candidate</p>
+<p class="text-label-sm text-on-surface-variant">Top 5% for UX roles</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Job Card 2 -->
+<div class="lg:col-span-8 group">
+<div class="glass-card glass-edge rounded-3xl p-md flex flex-col md:flex-row gap-md hover:border-cyan-400/50 transition-all duration-300 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4">
+<div class="flex flex-col items-end">
+<span class="text-xs font-bold uppercase tracking-widest text-cyan-400/60 mb-1">AI Match Score</span>
+<div class="text-3xl font-black text-cyan-400/80">89%</div>
+</div>
+</div>
+<div class="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-white/5 flex items-center justify-center border border-white/10 shrink-0">
+<span class="material-symbols-outlined text-4xl text-cyan-400" data-icon="stream">stream</span>
+</div>
+<div class="flex-1 pt-2 md:pt-0">
+<div class="mb-md">
+<h3 class="font-h3 text-h3 text-white group-hover:text-cyan-300 transition-colors">Staff Product Designer</h3>
+<div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-on-surface-variant font-body-md">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="domain">domain</span>
+                                    Velocity Dynamics
+                                </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+                                    New York, NY
+                                </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="payments">payments</span>
+                                    $190k - $240k
+                                </span>
+</div>
+</div>
+<div class="flex flex-wrap gap-xs mb-md">
+<span class="px-3 py-1 rounded-full bg-secondary-container/20 border border-secondary-container/30 text-secondary text-label-sm">Product Strategy</span>
+<span class="px-3 py-1 rounded-full bg-secondary-container/20 border border-secondary-container/30 text-secondary text-label-sm">AI Innovation</span>
+</div>
+<div class="flex gap-sm">
+<button class="bg-gradient-to-r from-cyan-400 to-cyan-500 text-black font-bold px-6 py-2.5 rounded-xl hover:shadow-[0_0_20px_rgba(0,240,255,0.4)] transition-all active:scale-95">Apply Now</button>
+<button class="glass-card px-4 py-2.5 rounded-xl border border-white/10 text-white hover:bg-white/10 transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Job Card 3 -->
+<div class="lg:col-span-8 group">
+<div class="glass-card glass-edge rounded-3xl p-md flex flex-col md:flex-row gap-md hover:border-cyan-400/50 transition-all duration-300 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4">
+<div class="flex flex-col items-end">
+<span class="text-xs font-bold uppercase tracking-widest text-cyan-400/40 mb-1">AI Match Score</span>
+<div class="text-3xl font-black text-cyan-400/60">85%</div>
+</div>
+</div>
+<div class="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-white/5 flex items-center justify-center border border-white/10 shrink-0">
+<span class="material-symbols-outlined text-4xl text-purple-300" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<div class="flex-1 pt-2 md:pt-0">
+<div class="mb-md">
+<h3 class="font-h3 text-h3 text-white group-hover:text-cyan-300 transition-colors">Creative Director</h3>
+<div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-on-surface-variant font-body-md">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="domain">domain</span>
+                                    Prism Agency
+                                </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+                                    San Francisco, CA
+                                </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="payments">payments</span>
+                                    $180k - $220k
+                                </span>
+</div>
+</div>
+<div class="flex flex-wrap gap-xs mb-md">
+<span class="px-3 py-1 rounded-full bg-secondary-container/20 border border-secondary-container/30 text-secondary text-label-sm">Creative Vision</span>
+<span class="px-3 py-1 rounded-full bg-secondary-container/20 border border-secondary-container/30 text-secondary text-label-sm">Brand Design</span>
+</div>
+<div class="flex gap-sm">
+<button class="bg-gradient-to-r from-cyan-400 to-cyan-500 text-black font-bold px-6 py-2.5 rounded-xl hover:shadow-[0_0_20px_rgba(0,240,255,0.4)] transition-all active:scale-95">Apply Now</button>
+<button class="glass-card px-4 py-2.5 rounded-xl border border-white/10 text-white hover:bg-white/10 transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Navigation Shells -->
+<!-- Bottom Navigation Bar (Mobile/Tablet Viewports) -->
+<nav class="md:hidden fixed bottom-8 left-1/2 -translate-x-1/2 w-[90%] max-w-md z-50 bg-white/10 dark:bg-slate-900/60 backdrop-blur-2xl rounded-2xl border border-white/20 shadow-[0_20px_50px_rgba(0,0,0,0.3)] flex justify-around items-center px-4 py-2">
+<a class="flex flex-col items-center justify-center text-slate-400 hover:text-white px-4 py-2 hover:bg-white/5 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-manrope text-[11px] font-medium uppercase tracking-wider">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-cyan-400 bg-cyan-400/10 rounded-xl px-4 py-2 scale-90 duration-300 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="work" style="font-variation-settings: 'FILL' 1;">work</span>
+<span class="font-manrope text-[11px] font-medium uppercase tracking-wider">Jobs</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 hover:text-white px-4 py-2 hover:bg-white/5 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-manrope text-[11px] font-medium uppercase tracking-wider">Settings</span>
+</a>
+</nav>
+<!-- Desktop Floating Nav Cluster (Optional desktop view) -->
+<div class="hidden md:flex fixed bottom-12 left-1/2 -translate-x-1/2 z-50 bg-white/10 backdrop-blur-2xl px-8 py-4 rounded-3xl border border-white/10 shadow-2xl gap-8">
+<button class="text-slate-400 hover:text-cyan-400 flex items-center gap-2 transition-colors">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-manrope text-sm font-bold uppercase tracking-widest">Dashboard</span>
+</button>
+<button class="text-cyan-400 flex items-center gap-2 transition-colors">
+<span class="material-symbols-outlined" data-icon="work" style="font-variation-settings: 'FILL' 1;">work</span>
+<span class="font-manrope text-sm font-bold uppercase tracking-widest">Jobs</span>
+</button>
+<button class="text-slate-400 hover:text-cyan-400 flex items-center gap-2 transition-colors">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-manrope text-sm font-bold uppercase tracking-widest">Settings</span>
+</button>
+</div>
+</body></html>

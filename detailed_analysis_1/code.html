@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI Resume Pro - Detailed Analysis</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Manrope:wght@600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#abe1ff",
+                        "surface-container-lowest": "#080f10",
+                        "tertiary": "#edf7ff",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-low": "#151d1e",
+                        "surface": "#0d1515",
+                        "on-surface-variant": "#b9cacb",
+                        "inverse-primary": "#006970",
+                        "tertiary-fixed": "#c1e8ff",
+                        "secondary-container": "#7d01b1",
+                        "on-surface": "#dce4e5",
+                        "primary-fixed": "#7df4ff",
+                        "background": "#0d1515",
+                        "surface-bright": "#333b3b",
+                        "on-tertiary": "#003548",
+                        "surface-container-highest": "#2e3637",
+                        "outline": "#849495",
+                        "surface-tint": "#00dbe9",
+                        "secondary": "#e9b3ff",
+                        "on-error": "#690005",
+                        "surface-variant": "#2e3637",
+                        "inverse-on-surface": "#2a3233",
+                        "on-primary-container": "#006970",
+                        "secondary-fixed-dim": "#e9b3ff",
+                        "error": "#ffb4ab",
+                        "inverse-surface": "#dce4e5",
+                        "on-primary": "#00363a",
+                        "surface-dim": "#0d1515",
+                        "surface-container-high": "#232b2c",
+                        "secondary-fixed": "#f6d9ff",
+                        "on-tertiary-fixed-variant": "#004d67",
+                        "outline-variant": "#3b494b",
+                        "on-secondary-fixed": "#310048",
+                        "primary": "#dbfcff",
+                        "tertiary-fixed-dim": "#74d1ff",
+                        "on-secondary-fixed-variant": "#7200a3",
+                        "primary-container": "#00f0ff",
+                        "on-tertiary-fixed": "#001e2b",
+                        "on-primary-fixed": "#002022",
+                        "on-primary-fixed-variant": "#004f54",
+                        "on-tertiary-container": "#006688",
+                        "surface-container": "#192122",
+                        "on-secondary-container": "#e5a9ff",
+                        "primary-fixed-dim": "#00dbe9",
+                        "on-background": "#dce4e5",
+                        "on-secondary": "#510074",
+                        "error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "xs": "4px",
+                        "sm": "12px",
+                        "md": "24px",
+                        "lg": "48px",
+                        "margin": "32px",
+                        "xl": "80px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "h3": ["Manrope"],
+                        "h1": ["Manrope"],
+                        "h2": ["Manrope"],
+                        "label-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                        "h3": ["24px", {"lineHeight": "1.4", "letterSpacing": "0", "fontWeight": "600"}],
+                        "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "h2": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        }
+        .glass-edge {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        body {
+            background-color: #0d1515;
+            background-image: 
+                radial-gradient(circle at 10% 10%, rgba(0, 240, 255, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 90% 90%, rgba(125, 1, 177, 0.1) 0%, transparent 40%);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.02);
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(0, 240, 255, 0.2);
+            border-radius: 10px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="font-body-md text-on-surface min-h-screen custom-scrollbar">
+<!-- TopAppBar -->
+<header class="fixed top-0 z-[100] w-full flex justify-between items-center px-6 py-4 bg-white/5 dark:bg-slate-900/40 backdrop-blur-xl border-b border-white/10 shadow-[0_8px_32px_0_rgba(0,240,255,0.1)]">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-cyan-400 cursor-pointer hover:opacity-80 transition-opacity">menu</span>
+<h1 class="text-xl font-black font-manrope tracking-tight text-cyan-400">AI Resume Pro</h1>
+</div>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex gap-8">
+<span class="font-manrope text-sm font-semibold tracking-tight text-cyan-400 cursor-pointer">My Analysis</span>
+<span class="font-manrope text-sm font-semibold tracking-tight text-slate-400 hover:opacity-80 transition-opacity cursor-pointer">Jobs</span>
+<span class="font-manrope text-sm font-semibold tracking-tight text-slate-400 hover:opacity-80 transition-opacity cursor-pointer">Settings</span>
+</nav>
+<div class="w-10 h-10 rounded-full border border-cyan-400/30 overflow-hidden cursor-pointer active:scale-95 duration-200">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="A professional headshot of a young designer with glasses and a friendly smile, set against a blurred studio background with soft cyan lighting accents to match the tech-focused UI. The image is clean, modern, and high-resolution, perfectly representing a senior product designer persona." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBH2NDn6C5BddFjxENEGNkpx6rs5Cwim1SiWYkohluqtLfaPEW4IJS2rAkKrw9feM27G-bHQdm77iEqYSv44zMB9kpV_CYh_YO_yqA9LnTfcIK4OF8ulFqtdAv-poFRwsJAp9STpgCH9pT-UcJHUq15osW2fYuhnyEYNp7ZocBGyJjMLXP_WUmvlLk5aS9cKaj-f_PPmJHRy3Noz7Yx_F6EesMfGvVqiff4e2d_kZdJkBoHFrYY-lhZHh0VsQ22AaTehnvk420k6Wux"/>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Profile Sidebar / Nav Drawer Representation -->
+<aside class="hidden lg:block md:col-span-3">
+<div class="glass-card glass-edge rounded-3xl h-fit p-8 sticky top-24 shadow-2xl shadow-cyan-900/20">
+<div class="flex flex-col items-center mb-8">
+<div class="w-20 h-20 rounded-full bg-gradient-to-br from-cyan-500 to-purple-600 p-1 mb-4">
+<div class="w-full h-full rounded-full bg-surface overflow-hidden">
+<img alt="User Avatar" class="w-full h-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxrAHNalOaMoeV1GHI3LGLMFXerRAti5ORfK5CpygZTVLuTOxR0KpeTe2W_wm8NmoTSgNURfTbd_ueLtzgAoVai2tx1KTI0NkbnqqHmAJbPF0Fcyb5xR5n7Uw1OsS6nU-jL7uo8lY6EjNF-uIeFY47_fETWmVroGLb4TWwUC4MMa7M1d156X7Y5tdhMBncAIM39TIBsMfAYPeeA1jg578LLyWCmD4uagVZuMJaE9UcLdsdL7-W6gOp7UzCXIra8HxpuzNGkYLD-9ek"/>
+</div>
+</div>
+<h2 class="font-manrope text-lg font-bold text-cyan-400">Alex Rivera</h2>
+<p class="text-slate-400 text-sm">Senior Product Designer</p>
+<div class="mt-4 px-4 py-1 rounded-full bg-cyan-400/10 border border-cyan-400/20">
+<span class="text-xs font-bold text-cyan-400">AI Score: 92</span>
+</div>
+</div>
+<nav class="space-y-2">
+<div class="flex items-center gap-3 bg-gradient-to-r from-cyan-500/20 to-transparent text-cyan-400 border-l-4 border-cyan-400 px-6 py-3 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-manrope text-sm font-medium">My Analysis</span>
+</div>
+<div class="flex items-center gap-3 text-slate-400 hover:bg-white/5 hover:text-white px-6 py-3 rounded-r-xl transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="insights">insights</span>
+<span class="font-manrope text-sm font-medium">Career Path</span>
+</div>
+<div class="flex items-center gap-3 text-slate-400 hover:bg-white/5 hover:text-white px-6 py-3 rounded-r-xl transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="edit_document">edit_document</span>
+<span class="font-manrope text-sm font-medium">Resume Builder</span>
+</div>
+<div class="mt-8 pt-8 border-t border-white/10">
+<div class="flex items-center gap-3 text-secondary hover:bg-white/5 px-6 py-3 rounded-xl transition-all cursor-pointer bg-secondary-container/10 border border-secondary-container/20">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-manrope text-sm font-bold uppercase tracking-wider">Upgrade</span>
+</div>
+</div>
+</nav>
+</div>
+</aside>
+<!-- Main Content Area -->
+<div class="md:col-span-12 lg:col-span-9 space-y-md">
+<!-- Overall Summary Card -->
+<section class="glass-card glass-edge rounded-3xl p-md">
+<div class="flex items-center justify-between mb-sm">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-cyan-400/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-cyan-400" data-icon="description">description</span>
+</div>
+<h2 class="font-h2 text-h2 text-cyan-400">Analysis Summary</h2>
+</div>
+<span class="text-slate-500 text-label-sm">UPDATED 2H AGO</span>
+</div>
+<p class="font-body-lg text-on-surface-variant leading-relaxed">
+                    Your resume demonstrates a <span class="text-cyan-300 font-semibold">highly technical proficiency</span> and strong alignment with Senior Design leadership roles. The AI has identified key achievements in design system scalability and cross-functional collaboration. However, your narrative could benefit from more quantifiable data regarding product impact and business outcomes in your most recent role.
+                </p>
+<div class="mt-md flex gap-sm overflow-x-auto pb-2 custom-scrollbar">
+<span class="px-4 py-2 rounded-full bg-surface-container-highest border border-outline-variant text-cyan-300 text-xs font-semibold whitespace-nowrap">User Experience</span>
+<span class="px-4 py-2 rounded-full bg-surface-container-highest border border-outline-variant text-cyan-300 text-xs font-semibold whitespace-nowrap">Design Systems</span>
+<span class="px-4 py-2 rounded-full bg-surface-container-highest border border-outline-variant text-cyan-300 text-xs font-semibold whitespace-nowrap">Figma Master</span>
+<span class="px-4 py-2 rounded-full bg-surface-container-highest border border-outline-variant text-cyan-300 text-xs font-semibold whitespace-nowrap">Product Strategy</span>
+</div>
+</section>
+<!-- Grid for Strengths and Weaknesses -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Strengths -->
+<section class="glass-card glass-edge rounded-3xl p-md flex flex-col">
+<div class="flex items-center gap-3 mb-md">
+<div class="w-10 h-10 rounded-xl bg-cyan-400/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-cyan-400" data-icon="verified">verified</span>
+</div>
+<h3 class="font-h3 text-h3 text-white">Core Strengths</h3>
+</div>
+<ul class="space-y-4">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-cyan-400 mt-1" data-icon="check_circle">check_circle</span>
+<div>
+<h4 class="font-bold text-on-surface">Strong Action Verbs</h4>
+<p class="text-sm text-on-surface-variant">Effective use of 'spearheaded', 'orchestrated', and 'scaled' throughout the experience section.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-cyan-400 mt-1" data-icon="check_circle">check_circle</span>
+<div>
+<h4 class="font-bold text-on-surface">Visual Hierarchy</h4>
+<p class="text-sm text-on-surface-variant">Excellent formatting and white space usage, making it highly readable for ATS systems.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-cyan-400 mt-1" data-icon="check_circle">check_circle</span>
+<div>
+<h4 class="font-bold text-on-surface">Keyword Density</h4>
+<p class="text-sm text-on-surface-variant">Perfect balance of industry-standard terms without over-optimization (keyword stuffing).</p>
+</div>
+</li>
+</ul>
+</section>
+<!-- Weaknesses -->
+<section class="glass-card glass-edge rounded-3xl p-md flex flex-col">
+<div class="flex items-center gap-3 mb-md">
+<div class="w-10 h-10 rounded-xl bg-error/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-error" data-icon="warning">warning</span>
+</div>
+<h3 class="font-h3 text-h3 text-white">Areas to Improve</h3>
+</div>
+<ul class="space-y-4">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-error mt-1" data-icon="report">report</span>
+<div>
+<h4 class="font-bold text-on-surface">Metrics Gaps</h4>
+<p class="text-sm text-on-surface-variant">Three bullet points lack quantifiable results. Suggest adding specific percentages or ROI figures.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-error mt-1" data-icon="report">report</span>
+<div>
+<h4 class="font-bold text-on-surface">Missing Skills</h4>
+<p class="text-sm text-on-surface-variant">Currently missing 'Accessibility Certification' which is high demand for your target roles.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-error mt-1" data-icon="report">report</span>
+<div>
+<h4 class="font-bold text-on-surface">Redundant Phrasing</h4>
+<p class="text-sm text-on-surface-variant">The phrase "Responsible for" appears 4 times. Consider using more varied power verbs.</p>
+</div>
+</li>
+</ul>
+</section>
+</div>
+<!-- Suggestions Bento-style Card -->
+<section class="glass-card glass-edge rounded-3xl p-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-md mb-md">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-secondary-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary" data-icon="tips_and_updates">tips_and_updates</span>
+</div>
+<h3 class="font-h3 text-h3 text-white">Strategic Suggestions</h3>
+</div>
+<button class="bg-gradient-to-r from-cyan-400 to-primary-container text-black font-bold px-6 py-3 rounded-xl hover:shadow-[0_0_20px_rgba(0,240,255,0.4)] transition-all active:scale-95">
+                        Apply AI Fixes
+                    </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+<div class="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-cyan-400/30 transition-all group">
+<div class="w-8 h-8 rounded-lg bg-cyan-400/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-cyan-400 text-sm" data-icon="bolt">bolt</span>
+</div>
+<h4 class="font-bold text-white mb-2">Quantify Impact</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">Instead of "Managed design team," use "Led a team of 12 designers to increase sprint velocity by 25%."</p>
+</div>
+<div class="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-cyan-400/30 transition-all group">
+<div class="w-8 h-8 rounded-lg bg-cyan-400/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-cyan-400 text-sm" data-icon="history_edu">history_edu</span>
+</div>
+<h4 class="font-bold text-white mb-2">Tailor Executive Summary</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">Add specific mention of "Scale-up Experience" as it matches your current job search filters.</p>
+</div>
+<div class="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-cyan-400/30 transition-all group">
+<div class="w-8 h-8 rounded-lg bg-cyan-400/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-cyan-400 text-sm" data-icon="link">link</span>
+</div>
+<h4 class="font-bold text-white mb-2">Portfolio Integration</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">Ensure your LinkedIn and Portfolio links are hyperlinked for ATS and human readability.</p>
+</div>
+</div>
+</section>
+<!-- Visual Content Placeholder -->
+<div class="relative w-full h-64 rounded-3xl overflow-hidden glass-edge shadow-2xl">
+<img alt="Data Visualization" class="w-full h-full object-cover opacity-50" data-alt="A sophisticated abstract background featuring flowing data lines and glowing nodes in deep cyan and electric purple. The aesthetic is high-tech and futuristic, representing the concept of AI data analysis and professional career growth. Soft lighting transitions create a sense of depth and atmospheric elegance consistent with a premium fintech interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDf9Xrv9svH881-9j1Fx8Qw001sYoREC1G9-wOKAfSb_PE7bIzeEQOoMK1AJIz1ooOIdqMHqXGOJ3bJA_PrIkrI-LRWb5qa1QVkpXC8VJCtgAL8cHt8apKndKad7RthyklFh1lUwvhvdT3UPpAz-jqtPMlz0aqjjPYrEDqKpJpLjjs9kEchqkX-puTVpiB2aVg55AWDy96_qgQR2XYZirnDKi60EfZncF6JyYvL4S95UUgFTOZ-0h-jL0YdkicXGQ8ct9YMGx4aURF3"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute bottom-8 left-8">
+<h4 class="font-manrope text-2xl font-black text-white">ATS Compatibility Map</h4>
+<p class="text-cyan-400 font-medium">98.4% Match with FAANG Standard</p>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-8 w-full z-50 flex justify-around items-center px-4">
+<div class="w-[90%] max-w-md bg-white/10 dark:bg-slate-900/60 backdrop-blur-2xl rounded-2xl border border-white/20 shadow-[0_20px_50px_rgba(0,0,0,0.3)] flex justify-around items-center py-2">
+<div class="flex flex-col items-center justify-center text-cyan-400 bg-cyan-400/10 rounded-xl px-4 py-2 active:scale-90 duration-300 transition-transform cursor-pointer">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-manrope text-[11px] font-medium uppercase tracking-wider">Dashboard</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 hover:text-white px-4 py-2 hover:bg-white/5 transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="work">work</span>
+<span class="font-manrope text-[11px] font-medium uppercase tracking-wider">Jobs</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 hover:text-white px-4 py-2 hover:bg-white/5 transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-manrope text-[11px] font-medium uppercase tracking-wider">Settings</span>
+</div>
+</div>
+</nav>
+</body></html>

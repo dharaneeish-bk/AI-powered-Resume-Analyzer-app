@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login - AI Resume Pro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Manrope:wght@600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#abe1ff",
+                        "surface-container-lowest": "#080f10",
+                        "tertiary": "#edf7ff",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-low": "#151d1e",
+                        "surface": "#0d1515",
+                        "on-surface-variant": "#b9cacb",
+                        "inverse-primary": "#006970",
+                        "tertiary-fixed": "#c1e8ff",
+                        "secondary-container": "#7d01b1",
+                        "on-surface": "#dce4e5",
+                        "primary-fixed": "#7df4ff",
+                        "background": "#0d1515",
+                        "surface-bright": "#333b3b",
+                        "on-tertiary": "#003548",
+                        "surface-container-highest": "#2e3637",
+                        "outline": "#849495",
+                        "surface-tint": "#00dbe9",
+                        "secondary": "#e9b3ff",
+                        "on-error": "#690005",
+                        "surface-variant": "#2e3637",
+                        "inverse-on-surface": "#2a3233",
+                        "on-primary-container": "#006970",
+                        "secondary-fixed-dim": "#e9b3ff",
+                        "error": "#ffb4ab",
+                        "inverse-surface": "#dce4e5",
+                        "on-primary": "#00363a",
+                        "surface-dim": "#0d1515",
+                        "surface-container-high": "#232b2c",
+                        "secondary-fixed": "#f6d9ff",
+                        "on-tertiary-fixed-variant": "#004d67",
+                        "outline-variant": "#3b494b",
+                        "on-secondary-fixed": "#310048",
+                        "primary": "#dbfcff",
+                        "tertiary-fixed-dim": "#74d1ff",
+                        "on-secondary-fixed-variant": "#7200a3",
+                        "primary-container": "#00f0ff",
+                        "on-tertiary-fixed": "#001e2b",
+                        "on-primary-fixed": "#002022",
+                        "on-primary-fixed-variant": "#004f54",
+                        "on-tertiary-container": "#006688",
+                        "surface-container": "#192122",
+                        "on-secondary-container": "#e5a9ff",
+                        "primary-fixed-dim": "#00dbe9",
+                        "on-background": "#dce4e5",
+                        "on-secondary": "#510074",
+                        "error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "xs": "4px",
+                        "sm": "12px",
+                        "md": "24px",
+                        "lg": "48px",
+                        "margin": "32px",
+                        "xl": "80px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "h3": ["Manrope"],
+                        "h1": ["Manrope"],
+                        "h2": ["Manrope"],
+                        "label-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                        "h3": ["24px", {"lineHeight": "1.4", "letterSpacing": "0", "fontWeight": "600"}],
+                        "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "h2": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(40px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        .glass-stroke {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background-clip: padding-box;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md min-h-screen relative overflow-hidden flex flex-col items-center">
+<div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+<div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-[#00f0ff] opacity-10 blur-[150px] rounded-full"></div>
+<div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-[#7d01b1] opacity-10 blur-[150px] rounded-full"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-br from-[#0d1515] via-[#151d1e] to-[#080f10]"></div>
+</div>
+<header class="relative z-10 w-full pt-16 flex justify-center">
+<h1 class="font-h1 text-h1 text-transparent bg-clip-text bg-gradient-to-r from-primary-container to-secondary tracking-tighter text-center">
+            AI Resume Pro
+        </h1>
+</header>
+<main class="relative z-10 flex-1 flex items-center justify-center w-full px-margin pb-xl">
+<div class="glass-card w-full max-w-[480px] rounded-[32px] p-md md:p-lg flex flex-col gap-md relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary-container/30 to-transparent"></div>
+<div class="flex flex-col gap-xs text-center mb-sm">
+<h2 class="font-h2 text-h2 text-on-surface">Welcome Back</h2>
+<p class="font-body-md text-on-surface-variant">Sign in to your professional AI workspace</p>
+</div>
+<form class="flex flex-col gap-md">
+<div class="flex flex-col gap-xs">
+<label class="font-label-sm text-label-sm text-primary uppercase ml-1">Email Address</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant">mail</span>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-xl py-4 pl-12 pr-4 text-on-surface focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-all" placeholder="alex.rivera@example.com" type="email"/>
+</div>
+</div>
+<div class="flex flex-col gap-xs">
+<div class="flex justify-between items-center ml-1">
+<label class="font-label-sm text-label-sm text-primary uppercase">Password</label>
+<a class="font-label-sm text-label-sm text-secondary-fixed-dim hover:text-secondary transition-colors" href="#">Forgot Password?</a>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant">lock</span>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-xl py-4 pl-12 pr-4 text-on-surface focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-all" placeholder="••••••••" type="password"/>
+</div>
+</div>
+<div class="flex items-center gap-sm mt-xs">
+<input class="w-5 h-5 rounded border-outline-variant bg-surface-container-low text-primary-container focus:ring-offset-background" id="remember" type="checkbox"/>
+<label class="font-body-md text-on-surface-variant text-sm" for="remember">Keep me logged in for 30 days</label>
+</div>
+<button class="w-full bg-gradient-to-r from-primary-container to-secondary py-4 rounded-xl font-h3 text-background font-bold hover:opacity-90 active:scale-[0.98] transition-all shadow-[0_0_20px_rgba(0,240,255,0.2)] mt-sm" type="submit">
+                    Login to Dashboard
+                </button>
+</form>
+<div class="relative my-sm">
+<div class="absolute inset-0 flex items-center"><div class="w-full border-t border-outline-variant"></div></div>
+<div class="relative flex justify-center text-xs uppercase"><span class="bg-surface-container px-2 text-on-surface-variant">Or continue with</span></div>
+</div>
+<div class="grid grid-cols-2 gap-sm">
+<button class="flex items-center justify-center gap-sm py-3 px-4 glass-stroke rounded-xl hover:bg-white/5 transition-colors">
+<img alt="Google Logo" class="w-5 h-5" data-alt="A clean, high-resolution vector icon of the Google 'G' logo in its signature four-color palette, set against a transparent background to blend into a modern glassmorphism interface. The lighting is neutral and even, ensuring the brand colors pop with high-integrity clarity within a professional fintech-inspired UI design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7izT0EUiUArpsMOGyvlE_Y070CA1a4MHJcoXLfpKqsP0ucxWf4AkcenZLMth13m8-fTG21paZjkvm75EiHXS0FpD3Pn-Xz280qVBHB09qec8tuG-whUwcgIxg0XvaF-wfzzVC-84uLVNH8Z7lN10SC8zaRh4RNdVgdHZV9jvGyWfkwQ0YiGk27nGQMpwLLdD9K1nIa-XW5Ikma4hwxRP89ddpiOfqBuXXpqooAfv2Csxn_JZPOzV8C1f9WPr00_k39M0srx_Uojf6"/>
+<span class="text-sm font-medium">Google</span>
+</button>
+<button class="flex items-center justify-center gap-sm py-3 px-4 glass-stroke rounded-xl hover:bg-white/5 transition-colors">
+<span class="material-symbols-outlined text-on-surface">hub</span>
+<span class="text-sm font-medium">LinkedIn</span>
+</button>
+</div>
+<div class="text-center mt-sm">
+<p class="font-body-md text-on-surface-variant text-sm">
+                    Don't have an account? 
+                    <a class="text-primary-container font-semibold hover:underline" href="#">Start free trial</a>
+</p>
+</div>
+</div>
+</main>
+<footer class="relative z-10 py-sm w-full text-center">
+<p class="font-label-sm text-label-sm text-outline uppercase tracking-widest opacity-50">
+            Powered by Enterprise-Grade AI Models
+        </p>
+</footer>
+<div class="fixed bottom-0 left-0 w-full h-[530px] pointer-events-none z-0">
+<img class="w-full h-full object-cover opacity-10 mix-blend-overlay" data-alt="An abstract digital landscape featuring flowing, ethereal lines of light in shades of deep cyan and vibrant violet. The composition suggests data streams and high-speed information flow, rendered with a soft Gaussian blur to create a sense of immense depth and spatial dimension. The overall mood is sophisticated, technical, and serene, perfectly complementing a premium AI-driven professional platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrvSWoUqAI1Gci2A2AbfqPzwN_hRXAD5KuI6DeQ2G9HjtJlmUPq18IYFla8PiLjtagivkagwFirI_t6ZtlIUBK3nt9BmFPDTNqLZNjxpoNhPxRbTr9amEDRHyOzkeRjlmzYOKL9gMC5caXGiAshqb2NjnFORzgpEoTJe48UtljN3TZLoErRLPcN93CA0L4MFkceXNrGlyoATU9EEXRsBt5PMdanFCy--l3tpyYkwGZNn3ufzmzLET5JVqwFFBfdUfSd9zy6POkgtFH"/>
+</div>
+</body></html>

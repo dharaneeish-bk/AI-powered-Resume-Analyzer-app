@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "title": "Frontend Developer",
+    "required_skills": ["flutter", "dart", "react", "javascript", "html", "css", "ui/ux", "mobile development"]
+  },
+  {
+    "id": 2,
+    "title": "Backend Developer",
+    "required_skills": ["python", "fastapi", "django", "node.js", "sql", "postgresql", "api", "docker", "aws"]
+  },
+  {
+    "id": 3,
+    "title": "Full Stack Developer",
+    "required_skills": ["flutter", "react", "python", "fastapi", "javascript", "sql", "docker", "git"]
+  },
+  {
+    "id": 4,
+    "title": "Data Scientist",
+    "required_skills": ["python", "machine learning", "pandas", "numpy", "scikit-learn", "sql", "nlp", "statistics"]
+  },
+  {
+    "id": 5,
+    "title": "DevOps Engineer",
+    "required_skills": ["linux", "docker", "kubernetes", "aws", "ci/cd", "jenkins", "bash", "python", "terraform"]
+  }
+]
