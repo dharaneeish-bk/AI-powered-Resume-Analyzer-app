@@ -1,6 +1,6 @@
 import re
 
-# A basic predefined list of skills. In a real system, this could be loaded from a database or a large taxonomy.
+# A basic predefined list of skills.
 PREDEFINED_SKILLS = [
     "python", "java", "c++", "c#", "javascript", "typescript", "html", "css",
     "react", "angular", "vue", "node.js", "express", "fastapi", "django", "flask",
