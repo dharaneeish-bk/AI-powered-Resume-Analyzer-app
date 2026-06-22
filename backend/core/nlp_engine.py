@@ -2,7 +2,7 @@ import nltk
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 
-# Download once
+
 nltk.download("punkt")
 nltk.download("stopwords")
 
