@@ -2,7 +2,7 @@
 
 #  AI Resume Analyzer
 
-### Analyze. Match. Improve. Get Hired.
+### Analyze. Match. Improve
 
 An AI-powered full-stack application that analyzes resumes, extracts skills, matches candidates with relevant job opportunities, and provides intelligent feedback for resume improvement.
 
